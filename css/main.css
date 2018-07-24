@@ -13,7 +13,7 @@ html,body {
 .card {
     /* background-color: rgba(21, 31, 32, 0.6);
      */
-     background-color: #BA275E;
+     background-color: #8E0438;
     color: #fff;
     display: flex;
     flex-flow: wrap;
@@ -24,11 +24,18 @@ html,body {
 }
 .card_header {
     width: 100%;
-    background-color: #8E0438;
+    /* background-color: #8E0438;
+     */
+     background-color:  #BA275E;
+     box-shadow: inset 5px 5px 5px #8E0438,
+                 inset -5px -5px 5px #8E0438;
     /* border: 3px solid salmon; */
     margin: 10px;
     text-align: center;
     letter-spacing: 2px;
+}
+#mainHeading {
+    font-family: 'Monoton', cursive;
 }
 #aboutGame {
     /* border: 3px solid salmon; */
@@ -38,7 +45,12 @@ html,body {
 
 }
 #infoHead {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family:  'Londrina Outline', cursive;
+}
+#infoBody {
+    font-family: 'Bungee Inline', cursive;
+    line-height: 1.2em;
 }
 .about_text {
     font-size: 18px;
@@ -51,6 +63,7 @@ html,body {
     color: #fff;
     padding: 5px;
     text-align: center;
+    font-family: 'Londrina Outline', cursive;
 }
 #guess_input {
     padding: 0;
@@ -62,6 +75,10 @@ html,body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: inset 5px 5px 5px #8E0438,
+                 inset -5px -5px 5px #8E0438;
+    font-family: 'Bungee Inline', cursive;
+    color: #8E0438;
     font-size:4vw;
     line-height: 1.2rem;
     font-weight: bolder;
@@ -80,15 +97,16 @@ html,body {
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
-    border-radius: 10px 10px;
+    /* border-radius: 10px 10px; */
     width: 100px;
     text-align: center;
     display: inline-block;
-    margin-left: ;
-    margin-right: ;
+    /* margin-left: ;
+    margin-right: ; */
     /* font-size:18px; */
     /* line-height: 1.2rem; */
     font-weight: bolder;
+    font-family:  'Londrina Outline', cursive;
       /* display: inline-block;  */
       /* padding: 20px 40px; */
       color: white;
@@ -103,21 +121,24 @@ html,body {
        */
        font-size: 1rem;
       transition: all .5s;
-      background-color: #8E0438;
+      background-color:  #BA275E;
+      box-shadow: inset 5px 5px 5px #8E0438,
+                 inset -5px -5px 5px #8E0438;
   }
   #button2 { 
-    padding: 5px;
+    padding: 2px;
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
-    border-radius: 10px 10px;
-    width: 110px;
+    /* border-radius: 10px 10px; */
+    width: 115px;
     text-align: center;
     display: inline-block;
     margin-left: ;
     margin-right: ;
     /* font-size:18px; */
     /* line-height: 1.2rem; */
+    font-family:  'Londrina Outline', cursive;
     font-weight: bolder;
       /* display: inline-block;  */
       /* padding: 20px 40px; */
@@ -133,7 +154,9 @@ html,body {
        */
        font-size: 1rem;
       transition: all .5s;
-      background-color: #8E0438;
+      background-color:  #BA275E;
+      box-shadow: inset 5px 5px 5px #8E0438,
+                 inset -5px -5px 5px #8E0438;
   }
   .input{
       display: inline-block;
@@ -181,9 +204,9 @@ html,body {
               bottom: -3px;
           }	
        */
-       .gradient-border {
+       /* .gradient-border {
         --borderWidth: 4px;
-        background: #8E0438;
+        background: #BA275E;
         position: relative;
         border-radius: var(--borderWidth);
       }
@@ -199,7 +222,7 @@ html,body {
         z-index: -1;
         animation: animatedgradient 3s ease alternate infinite;
         background-size: 300% 300%;
-      }
+      } */
       .c {
           background-color: green !important;
           color: #fff !important;
@@ -207,7 +230,7 @@ html,body {
       }
       
       
-      @keyframes animatedgradient {
+      /* @keyframes animatedgradient {
           0% {
               background-position: 0% 50%;
           }
@@ -217,7 +240,7 @@ html,body {
           100% {
               background-position: 0% 50%;
           }
-      }
+      } */
       
       
       
