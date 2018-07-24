@@ -1,0 +1,248 @@
+html {
+    background-color: #333;
+    background-image: url(../images/bg2.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+html,body {
+    padding: 0;
+    margin: 0;
+}
+.card {
+    /* background-color: rgba(21, 31, 32, 0.6);
+     */
+     background-color: #BA275E;
+    color: #fff;
+    display: flex;
+    flex-flow: wrap;
+    /* width: 100%; */
+    margin: 10px;
+    border-radius: 10px 10px;
+    padding-bottom: 10px;
+}
+.card_header {
+    width: 100%;
+    background-color: #8E0438;
+    /* border: 3px solid salmon; */
+    margin: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#aboutGame {
+    /* border: 3px solid salmon; */
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+
+}
+#infoHead {
+    letter-spacing: 1px;
+}
+.about_text {
+    font-size: 18px;
+}
+.card_body {
+    width: 100%;
+}
+.footer {
+    /* width: 100%; */
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+#guess_input {
+    padding: 0;
+    border: none;
+    height: 80px;
+    width: 150px;
+    border-radius: 5px 5px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:4vw;
+    line-height: 1.2rem;
+    font-weight: bolder;
+}
+/* #button {
+    
+} */
+/* %test {
+    position: absolute;
+      content: '';
+      transition: all .5s;
+  } */
+  
+  #button { 
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 10px 10px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    margin-left: ;
+    margin-right: ;
+    /* font-size:18px; */
+    /* line-height: 1.2rem; */
+    font-weight: bolder;
+      /* display: inline-block;  */
+      /* padding: 20px 40px; */
+      color: white;
+      /* position: absolute; */
+      /* top: 50%;
+      left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      /* vertical-align: middle; */
+      font-family: 'Rubik One', sans-serif;
+      text-decoration: none;
+      /* font-size: 4vw;
+       */
+       font-size: 1rem;
+      transition: all .5s;
+      background-color: #8E0438;
+  }
+  #button2 { 
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 10px 10px;
+    width: 110px;
+    text-align: center;
+    display: inline-block;
+    margin-left: ;
+    margin-right: ;
+    /* font-size:18px; */
+    /* line-height: 1.2rem; */
+    font-weight: bolder;
+      /* display: inline-block;  */
+      /* padding: 20px 40px; */
+      color: white;
+      /* position: absolute; */
+      /* top: 50%;
+      left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      /* vertical-align: middle; */
+      font-family: 'Rubik One', sans-serif;
+      text-decoration: none;
+      /* font-size: 4vw;
+       */
+       font-size: 1rem;
+      transition: all .5s;
+      background-color: #8E0438;
+  }
+  .input{
+      display: inline-block;
+      margin-left: 55px;
+      margin-right: auto;
+  }
+  
+      /* #button::before {
+        position: absolute;
+        content: '';
+        transition: all .5s;
+          bottom: -15px;
+          height: 15px;
+          width: 100%;
+          left: 8px;
+          transform: skewX(45deg);
+          background-color: #084874;
+      }
+  
+      #button::after {
+        position: absolute;
+        content: '';
+        transition: all .5s;
+          right: -15px;
+          height: 100%;
+          width: 15px;
+          bottom: -8px;
+          transform: skewY(45deg);
+          background-color: #0a3f63;
+      }
+   */
+      #button:active {
+          /* margin-left: 10px;
+          margin-top: 10px; */
+      }
+      /* #button::before {
+              bottom: -5px;
+              height: 5px;
+              left: 3px;
+          }
+          
+          #button::after {
+              right: -5px;
+              width: 5px;
+              bottom: -3px;
+          }	
+       */
+       .gradient-border {
+        --borderWidth: 4px;
+        background: #8E0438;
+        position: relative;
+        border-radius: var(--borderWidth);
+      }
+      .gradient-border:after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+      }
+      .c {
+          background-color: green !important;
+          color: #fff !important;
+          
+      }
+      
+      
+      @keyframes animatedgradient {
+          0% {
+              background-position: 0% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 0% 50%;
+          }
+      }
+      
+      
+      
+  
+
+@media screen and (max-width:321px) {
+    #guess_input {
+        padding: 0;
+        border: none;
+        height: 80px;
+        width: 150px;
+        border-radius: 5px 5px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size:7vw;
+        line-height: 1.2rem;
+        font-weight: bolder;
+    }
+}
+@media screen and (min-width:320px) {
+ .card {
+     width: 321px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+}
