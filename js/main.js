@@ -29,21 +29,26 @@ let total = 1;
 button.addEventListener('click',function (){
     
     console.log("total = ", total);
+    
     let userInput = Number(document.getElementById('guess_input').value);
-    this.style.color = 'red';
+    // this.style.color = 'red';
     while(total < 11){
+           
             if(!(isNaN(userInput))) {
                 console.log("random =",randomNumber);
                     if(userInput === randomNumber) {
                         infoHead.textContent = `${message[3]}`;
                         infoBody.textContent = `${message[8]} ${total} trials`;
-                        this.classList.add("c");
+                        this.classList.add("c","animated","rubberBand","delay-4s");
+                        infoHead.classList.remove("animated","shake","delay-4s","shadow-failure");
+                        infoHead.classList.add("c","animated","tada","delay-4s","shadow-success");
                         this.disabled = true;
                         let userInput =document.getElementById('guess_input');
                         userInput.value = "";
                         break;
                     }
                     else if(userInput !== randomNumber) {
+                        infoHead.classList.add("animated","shake","delay-4s","shadow-failure");
                         infoHead.textContent = `${message[4]}`;
                             if((userInput > randomNumber) && (userInput < 101)) {
                                 infoBody.textContent = `${message[5]} , ${(10 - total)} trials remaining`;
@@ -76,6 +81,9 @@ button.addEventListener('click',function (){
 button2.addEventListener('click',function(){
     total = 1;
     button.disabled = false;
+    button.classList.remove("c","animated","rubberBand","delay-4s");
+    infoHead.classList.remove("c","animated","tada","delay-4s","shadow-success");
+    infoHead.classList.remove("animated","shake","delay-4s","shadow-failure");
     randomNumber = randomNumberGenerator();
     infoHead.textContent = `${message[0]}`;
     infoBody.textContent = `${message[1]}`;
