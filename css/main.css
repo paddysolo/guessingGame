@@ -1,10 +1,12 @@
 html {
     background-color: #333;
-    background-image: url(../images/bg2.jpg);
+    background-image: url(../images/bg3.jpg);
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    /* height: 100vh; */
+    padding: 0;
+    margin: 0;
 }
 html,body {
     padding: 0;
@@ -13,14 +15,16 @@ html,body {
 .card {
     /* background-color: rgba(21, 31, 32, 0.6);
      */
-     background-color: #8E0438;
+     background-color: rgba(142, 4, 56, .5);
+     box-shadow: inset 5px 5px 5px #8E0438,
+                 inset -5px -5px 5px #8E0438;
     color: #fff;
     display: flex;
     flex-flow: wrap;
     /* width: 100%; */
     margin: 10px;
     border-radius: 10px 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .about_head {
     background-color: green;
@@ -29,7 +33,7 @@ html,body {
     width: 100%;
     /* background-color: #8E0438;
      */
-     background-color:  #BA275E;
+     background-color:  rgba(186, 39, 94, .4);
      box-shadow: inset 5px 5px 5px #8E0438,
                  inset -5px -5px 5px #8E0438;
     /* border: 3px solid salmon; */
@@ -82,7 +86,7 @@ html,body {
 .footer {
     /* width: 100%; */
     color: #fff;
-    padding: 5px;
+    padding:;
     text-align: center;
     font-family: 'Londrina Outline', cursive;
 }
@@ -268,6 +272,14 @@ html,body {
   
 
 @media screen and (max-width:321px) {
+    /* html {
+        background-color: #333;
+        background-image: url(../images/bg3.jpg);
+        // background-position: center; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        // height: 100vh; 
+    } */
     #guess_input {
         padding: 0;
         border: none;
@@ -283,7 +295,7 @@ html,body {
         font-weight: bolder;
     }
 }
-@media screen and (min-width:320px) {
+@media screen and (min-width:322px) {
  .card {
      width: 321px;
      margin-left: auto;
