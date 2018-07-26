@@ -9,11 +9,12 @@ let button = document.getElementById('button');
 let button2 = document.getElementById('button2');
 let infoHead = document.getElementById('infoHead');
 let infoBody = document.getElementById('infoBody');
+let priceWonContent = document.getElementById('priceWon');
 
 
 let message = [ 
     'OBJECTIVE',
-    'A random number has been choosen between 1 and 100. Can you guess it in 10 tries?',
+    'A random number has been choosen between 1 and 100. Can you guess it in 10 trials?',
     'Please input a Number between 1 - 100 !!',
     'GREAT GUESS',
     'WRONG GUESS',
@@ -23,19 +24,33 @@ let message = [
     'You got the Lucky Number in ',
     'YOU LOSE !!!'
 ]; 
+let priceWon = [ 
+    'King Octopus',
+    'Mr Pastor !!!',
+    'Small prophet !!',
+    'wizard of oz !!',
+    'Mr Merlin !!',
+    'Monkey De Lufy !!!',
+    'Sorcerer !!!',
+    'Mr Path-Finder !!!',
+    'Mutant Brain Power!!',
+    'You are Human !!!'
+]; 
 infoHead.textContent = `${message[0]}`;
 infoBody.textContent = `${message[1]}`;
 let total = 1;
 button.addEventListener('click',function (){
     
-    console.log("total = ", total);
+//     console.log("total = ", total);
     
     let userInput = Number(document.getElementById('guess_input').value);
     // this.style.color = 'red';
     while(total < 11){
            
             if(!(isNaN(userInput))) {
-                console.log("random =",randomNumber);
+                // infoHead.classList.add("animated","shake","delay-4s","shadow-failure");
+                                
+//                 console.log("random =",randomNumber);
                     if(userInput === randomNumber) {
                         infoHead.textContent = `${message[3]}`;
                         infoBody.textContent = `${message[8]} ${total} trials`;
@@ -45,8 +60,11 @@ button.addEventListener('click',function (){
                         this.disabled = true;
                         let userInput =document.getElementById('guess_input');
                         userInput.value = "";
+                        priceWonContent.textContent = `${priceWon[total-1]}`;
+                        priceWonContent.classList.add("priceWon");
                         break;
                     }
+                    
                     else if(userInput !== randomNumber) {
                         infoHead.classList.add("animated","shake","delay-4s","shadow-failure");
                         infoHead.textContent = `${message[4]}`;
@@ -84,6 +102,8 @@ button2.addEventListener('click',function(){
     button.classList.remove("c","animated","rubberBand","delay-4s");
     infoHead.classList.remove("c","animated","tada","delay-4s","shadow-success");
     infoHead.classList.remove("animated","shake","delay-4s","shadow-failure");
+    priceWonContent.textContent = "";
+    priceWonContent.classList.remove("priceWon");
     randomNumber = randomNumberGenerator();
     infoHead.textContent = `${message[0]}`;
     infoBody.textContent = `${message[1]}`;
